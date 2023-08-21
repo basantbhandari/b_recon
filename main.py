@@ -17,6 +17,7 @@ main_logger = get_default_logger()
 
 class b_recon():
     def __init__(self, Config):
+        self.welcome_message()
         self.Config = Config
         self.domain_url = Config.DOMAIN_NAME
         self.output_dir = Config.OUTPUT_DIR
@@ -24,7 +25,6 @@ class b_recon():
         self.subdomain_enumeration_word_list = Config.SUBDOMAIN_ENUMERATION_WORLD_LIST
         self.domain_name = None
         self.get_domain_name()
-        self.welcome_message()
         self.get_whois_information()
         self.get_DNS_information_by_dig()
         self.get_DNS_information_by_nslookup()
